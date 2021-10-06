@@ -3,13 +3,26 @@
   "version": "1.0.0",
   "description": "Set up a Github Page personal blog",
   "main": "index.js",
+  "sideEffects": false,
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "deploy": "bash deploy.sh"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amoursun/blob.git"
+  },
+  "keywords": [
+    "vuepress",
+    "blog"
+  ],
   "author": "GYL",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amoursun/blob/issues"
+  },
+  "homepage": "https://github.com/amoursun/blob/blob/master/README.md",
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "@vuepress/plugin-google-analytics": "^1.8.2",
