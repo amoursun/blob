@@ -20,9 +20,9 @@ module.exports = {
             serviceWorker: true,
             updatePopup: true
         }],
-        ['@vuepress/google-analytics', {
-            ga: '**-*********-*'
-        }],
+        // ['@vuepress/google-analytics', {
+        //     ga: '**-*********-*' // 你的Google Analytics ID
+        // }],
         ['@vuepress/medium-zoom', true],
         ['@vuepress/back-to-top'],
         ['@vuepress/nprogress'],
