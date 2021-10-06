@@ -9,6 +9,88 @@ subTxt: 前端技术
 
 linkList:
 
+ Picture:
+  - title: pixiv
+    icon: /img/links.png
+    des: 默认
+    links: http://www.pixiv.net/  
+  - title: Iconfont
+    icon: /img/links.png
+    des: 阿里巴巴矢量图标库
+    links: http://iconfont.cn/collections/index
+  - title: Font Awesome
+    icon: /img/links.png
+    des: 图标库
+    links: http://www.fontawesome.com.cn/faicons/  
+  - title: IcoMoon
+    icon: /img/links.png
+    des: Icon Font
+    links: https://icomoon.io/app/#/select    
+  - title: shields
+    icon: /img/links.png
+    des: 标签图标
+    links: https://shields.io/   
+  - title: Vectorizer
+    icon: /img/links.png
+    des: SVG转换
+    links: https://www.vectorizer.io/    
+  - title: Favicon
+    icon: /img/links.png
+    des: ICO制作
+    links: http://www.faviconico.org/    
+  - title: Loading
+    icon: /img/links.png
+    des: 动态图生成器
+    links: https://loading.io/   
+  - title: tinypng
+    icon: /img/links.png
+    des: 图片压缩
+    links: https://tinypng.com/  
+  - title: Abyss
+    icon: /img/links.png
+    des: 默认
+    links: https://wall.alphacoders.com/
+  - title: 彼岸
+    icon: /img/links.png
+    des: 默认
+    links: http://pic.netbian.com/
+  - title: 720云
+    icon: /img/links.png
+    des: 默认
+    links: https://720yun.com/
+  - title: 500px
+    icon: /img/links.png
+    des: 默认
+    links: https://500px.com/
+  - title: GIPHY
+    icon: /img/links.png
+    des: 默认
+    links: https://giphy.com/ 
+  - title: wallhaven
+    icon: /img/links.png
+    des: 默认
+    links: https://alpha.wallhaven.cc/forums 
+  - title: 千图网
+    icon: /img/links.png
+    des: 默认
+    links: http://www.58pic.com/  
+  - title: 千库网
+    icon: /img/links.png
+    des: 默认
+    links: http://588ku.com/  
+  - title: 花瓣
+    icon: /img/links.png
+    des: 默认
+    links: http://huaban.com/pins/925818491/
+  - title: 魔工坊
+    icon: /img/links.png
+    des: 默认
+    links: http://www.mooban.cn/
+  - title: wallpaperswide
+    icon: /img/links.png
+    des: 默认
+    links: http://wallpaperswide.com/
+
  APIS:
  - title:  网易云音乐1
    icon:  /img/links.png

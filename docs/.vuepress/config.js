@@ -72,16 +72,7 @@ module.exports = {
             {text: '首页', link: '/'},
             {
                 text: '链接',
-                items: [
-                    {
-                        text: '前端',
-                        link: '/links/wiki'
-                    },
-                    {
-                        text: '技术栈',
-                        link: '/links/stack'
-                    },
-                ]
+                link: '/links/stack',
 
             },
             {
