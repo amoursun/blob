@@ -49,20 +49,20 @@ then
     git push origin $release_branch
 
     # 确保脚本抛出遇到的错误
-    set -e
+    # set -e
 
     # 生成静态文件
-    yarn docs:build
+    # yarn docs:build
 
     # 进入生成的文件夹
-    cd dist
+    # cd dist
 
     # 如果是发布到自定义域名
     # echo 'www.example.com' > CNAME
 
-    git init
-    git add -A
-    git commit -am "deploy"
+    # git init
+    # git add -A
+    # git commit -am "deploy"
 
     # 如果发布到 https://<USERNAME>.github.io
     # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
@@ -70,9 +70,9 @@ then
     # 如果发布到 https://<USERNAME>.github.io/<REPO>
     # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
-    git push -f git@github.com:$USERNAME/$REPO.git master:gh-page
+    # git push -f git@github.com:$USERNAME/$REPO.git master:gh-page
 
-    cd -
+    # cd -
 
 else
     echo "config.sh 不存在, 请参照 config_example.sh 创建一个你的发布配置文件"
