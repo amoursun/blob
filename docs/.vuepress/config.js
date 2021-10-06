@@ -13,7 +13,14 @@ module.exports = {
     // base: '/blob/', // 这是部署到github相关的配置 下面会讲
     base: '/blob/',
     markdown: {
-        lineNumbers: true // 代码块显示行号
+        lineNumbers: true, // 代码块显示行号
+        // Markdown 文件的 headers (标题 & 小标题) 会在准备阶段被提取出来，并存储在 this.$page.headers 中。
+        // 默认情况下，VuePress 会提取 h2 和 h3 标题。你可以通过这个选项来修改提取出的标题级别
+        extractHeaders: ['h2', 'h3', 'h4'],
+        extendMarkdown: md => {
+            md.set({breaks: true});
+            md.use(require('markdown-it-include'));
+        }
     },
     port: '6688',
     plugins: [
@@ -135,12 +142,6 @@ module.exports = {
                 ]
             },
         ],
-        markdown: {
-            config: md => {
-                // use more markdown-it plugins!
-                md.use(require('markdown-it-include'))
-            }
-        },
         hiddenPages: [],
         // sidebar: 'auto',
         // 侧边栏菜单( 一个模块对应一个菜单形式 )
@@ -191,5 +192,5 @@ module.exports = {
         //         }
         //     }
         // }
-    }
+    },
 };

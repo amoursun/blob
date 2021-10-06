@@ -6025,10 +6025,10 @@ markdown-it-footnote@^3.0.3:
   resolved "https://registry.nlark.com/markdown-it-footnote/download/markdown-it-footnote-3.0.3.tgz#e0e4c0d67390a4c5f0c75f73be605c7c190ca4d8"
   integrity sha1-4OTA1nOQpMXwx19zvmBcfBkMpNg=
 
-markdown-it-include@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.npm.taobao.org/markdown-it-include/download/markdown-it-include-1.1.1.tgz#7015209f7b64365d32bb6ccc25366bc15d3eadc9"
-  integrity sha1-cBUgn3tkNl0yu2zMJTZrwV0+rck=
+markdown-it-include@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmmirror.com/markdown-it-include/download/markdown-it-include-2.0.0.tgz#e86e3b3c68c8f0e0437e179ba919ffd28443127a"
+  integrity sha1-6G47PGjI8OBDfhebqRn/0oRDEno=
 
 markdown-it-sub@^1.0.0:
   version "1.0.0"
@@ -6056,7 +6056,7 @@ markdown-link@^0.1.1:
   resolved "https://registry.npm.taobao.org/markdown-link/download/markdown-link-0.1.1.tgz#32c5c65199a6457316322d1e4229d13407c8c7cf"
   integrity sha1-MsXGUZmmRXMWMi0eQinRNAfIx88=
 
-markdown-toc@1.2.0:
+markdown-toc@^1.2.0:
   version "1.2.0"
   resolved "https://registry.npm.taobao.org/markdown-toc/download/markdown-toc-1.2.0.tgz#44a15606844490314afc0444483f9e7b1122c339"
   integrity sha1-RKFWBoREkDFK/ARESD+eexEiwzk=

@@ -5,7 +5,7 @@
 
 !!!include(docs/blog/javascript/NodeList和HTMLCollection之间的关系.md)!!!
 
-!!!include(docs/blog/javascript/map(parseInt)坑.md)!!!
+!!!include(docs/blog/javascript/map-parseInt坑.md)!!!
 
 !!!include(docs/blog/javascript/默认参数引发的bug.md)!!!
 
@@ -56,7 +56,7 @@
 问题就出在 Safari 对于这个格式 `YYYY-MM-DD HH:MM:SS` 无法解析，所以我们需要做的是将其转化为 `YYYY/MM/DD HH:MM:SS`
 
 ```js
-+new Date(val.replace(/-/g, '/')
+    +new Date(val.replace(/-/g, '/'))
 ```
 
 ## 获取元素宽度
