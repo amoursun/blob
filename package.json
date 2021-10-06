@@ -9,7 +9,7 @@
     "docs:build": "vuepress build docs",
     "deploy:start": "bash deploy.sh",
     "deploy": "gh-pages -d dist",
-    "deploy:build": "npm run docs:build && gh-pages -d dist"
+    "deploy:build": "yarn docs:build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
