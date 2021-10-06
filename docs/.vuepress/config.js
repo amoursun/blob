@@ -4,7 +4,7 @@ module.exports = {
     title: "Amoursun's Blog",
     description: '作为技术博客, 文档, 技术整理',
     //  指定 vuepress build 的输出目录
-    // dest: 'dist/',
+    dest: 'dist/',
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
         ['link', {rel: 'icon', href: '/img/logo.ico'}], // 增加一个自定义的 favicon(网页标签的图标)
