@@ -1,0 +1,37 @@
+{
+  "name": "personal-blog",
+  "version": "1.0.0",
+  "description": "Set up a Github Page personal blog",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "author": "GYL",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "@vuepress/plugin-google-analytics": "^1.8.2",
+    "@vuepress/plugin-medium-zoom": "^1.8.2",
+    "@vuepress/plugin-nprogress": "^1.8.2",
+    "@vuepress/plugin-pwa": "^1.8.2",
+    "@vuepress/theme-blog": "^2.3.3",
+    "highlight.js": "^11.2.0",
+    "leancloud-storage": "^4.12.0",
+    "less": "^4.1.2",
+    "less-loader": "7.3.0",
+    "lodash": "^4.17.21",
+    "valine": "^1.4.14",
+    "vuepress": "^1.8.2",
+    "vuepress-theme-simple": "^1.2.2",
+    "vuepress-theme-simple-blog": "^1.1.0"
+  },
+  "dependencies": {
+    "@vuepress/plugin-blog": "^1.9.4",
+    "@vuepress/plugin-last-updated": "^1.8.2",
+    "dayjs": "^1.10.7",
+    "markdown-it-footnote": "^3.0.3",
+    "markdown-it-sub": "^1.0.0",
+    "vuepress-plugin-mathjax": "^1.2.8"
+  }
+}
