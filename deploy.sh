@@ -22,6 +22,6 @@ git commit -m 'deploy'
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
-git push -f git@github.com:amoursun/blob.git develop:gh-pages
+git push -f https://${ACCESS_TOKEN}github.com/amoursun/blob.git develop:gh-pages
 
 cd -
