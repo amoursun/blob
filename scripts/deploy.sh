@@ -46,7 +46,7 @@ then
     git add .
     git commit -am "deploy ${release_branch}: 评论: ${git_mark_name}"
     # 推送到远端
-    git push origin/$release_branch
+    git push origin $release_branch
 
     # 确保脚本抛出遇到的错误
     set -e
