@@ -7,14 +7,14 @@ module.exports = {
     dest: 'dist',
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
-        ['link', {rel: 'icon', href: '/img/logo.ico'}], // 增加一个自定义的 favicon(网页标签的图标)
-        //增加manifest.json
-        // ['link', { rel: 'manifest', href: '/manifest.json' }],
+        ['link', {rel: 'icon', href: '/img/logo.ico'}],
     ],
-    base: '/', // 这是部署到github相关的配置 下面会讲
+    // base: '/blob/', // 这是部署到github相关的配置 下面会讲
+    base: '/blob/',
     markdown: {
         lineNumbers: true // 代码块显示行号
     },
+    port: '6688',
     plugins: [
         ['@vuepress/pwa', {
             serviceWorker: true,
@@ -26,11 +26,6 @@ module.exports = {
         ['@vuepress/medium-zoom', true],
         ['@vuepress/back-to-top'],
         ['@vuepress/nprogress'],
-        [{
-            mathjax: {
-                target: 'chtml',
-            },
-        }],
     ],
     // configureWebpack: {
     //     resolve: {
@@ -41,24 +36,8 @@ module.exports = {
     //     }
     // },
     chainWebpack: config => {
-        config.resolve.alias.set('@docs', path.resolve(__dirname, '../docs'));
         config.resolve.alias.set('@theme', path.resolve(__dirname, './theme'))
     },
-    // locales: {
-    //     // 键名是该语言所属的子路径
-    //     // 作为特例，默认语言可以使用 '/' 作为其路径。
-    //     '/en/': {
-    //         lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
-    //         title: 'English',
-    //         description: 'Vue-powered Static Site Generator'
-    //     },
-    //     '/': {
-    //         lang: 'zh-CN',
-    //         title: '中文',
-    //         description: 'Vue 驱动的静态网站生成器'
-    //     }
-    // },
-    // theme: '@vuepress/blog',
     themeConfig: {
         // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
         repo: 'https://github.com/amoursun/blob.git',
@@ -78,18 +57,37 @@ module.exports = {
         // editLinkText: 'Git EditLink [Private]',
         // 文档更新时间：每个文件git最后提交的时间,
         lastUpdated: '最后更新于(Last Updated)',
+        serviceWorker: {
+            updatePopup: true
+        },
         // 侧边栏搜索深度
         sidebarDepth: 4, // 将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
-        search: true,
+        // search: true,
         searchMaxSuggestions: 10,
         // 顶部导航栏
         nav: [
             // 单项 text：显示文字，link：指向链接
             // 这里的'/' 指的是 docs文件夹路径
             // [以 '/' 结尾的默认指向该路径下README.md文件]
-            {text: 'Blog', link: '/'},
-            {text: '链接', link: '/links/wiki/'},
-            {text: 'FAQ', link: '/FAQ/'},
+            {text: '首页', link: '/'},
+            {
+                text: '链接',
+                items: [
+                    {
+                        text: '前端',
+                        link: '/links/wiki'
+                    },
+                    {
+                        text: '技术栈',
+                        link: '/links/stack'
+                    },
+                ]
+
+            },
+            {
+                text: '掘金',
+                link: 'https://juejin.cn/'
+            },
             // 多项，下拉形式
             {
                 text: '分类',
@@ -125,14 +123,6 @@ module.exports = {
                     }
                 ]
             },
-            // 多项，下拉形式
-            {
-                text: '作者',
-                items: [
-                    // link：指向链接也可以是外网链接
-                    {text: '关于作者', link: '/another/aboutSelf'},
-                ]
-            },
         ],
         hiddenPages: [
             // '/',
@@ -140,15 +130,6 @@ module.exports = {
         // sidebar: 'auto',
         // 侧边栏菜单( 一个模块对应一个菜单形式 )
         sidebar: {
-            '/FAQ/': [
-                {
-                    title: 'FAQ',
-                    children: [
-                        ['/FAQ/content/question-1', '#FAQ_question_1'],
-                        ['/FAQ/content/question-2', '#FAQ_question_2'],
-                    ]
-                }
-            ],
             '/thought/': [
                 {
                     title: 'JS',

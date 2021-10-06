@@ -6,8 +6,8 @@ module.exports = (options, ctx) => ({
     const { themeConfig, siteConfig } = ctx
     // resolve algolia
     const isAlgoliaSearch = (
-      themeConfig.algolia
-      || Object.keys(siteConfig.locales && themeConfig.locales || {})
+      themeConfig.algolia ||
+      Object.keys(siteConfig.locales && themeConfig.locales || {})
         .some(base => themeConfig.locales[base].algolia)
     )
     return {
@@ -18,40 +18,8 @@ module.exports = (options, ctx) => ({
   },
 
   plugins: [
-    ['@vuepress/active-header-links', options.activeHeaderLinks],
+    '@vuepress/active-header-links',
     '@vuepress/search',
-    '@vuepress/plugin-nprogress',
-    ['container', {
-      type: 'tip',
-      defaultTitle: {
-        '/zh/': '提示'
-      }
-    }],
-    ['container', {
-      type: 'warning',
-      defaultTitle: {
-        '/zh/': '注意'
-      }
-    }],
-    ['container', {
-      type: 'danger',
-      defaultTitle: {
-        '/zh/': '警告'
-      }
-    }]
-  ],
-
-  extendPageData($page) {
-    const {
-      _filePath,
-      _computed,
-      _content,
-      _strippedContent,
-      key,
-      frontmatter,
-      regularPath,
-      path,
-    } = $page
-    $page.content = $page._strippedContent;
-  }
+    '@vuepress/plugin-nprogress'
+  ]
 })
