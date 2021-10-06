@@ -11,7 +11,7 @@ module.exports = {
         //增加manifest.json
         ['link', { rel: 'manifest', href: '/manifest.json' }],
     ],
-    base: '/blog/', // 这是部署到github相关的配置 下面会讲
+    base: './blog/', // 这是部署到github相关的配置 下面会讲
     markdown: {
         lineNumbers: true // 代码块显示行号
     },
