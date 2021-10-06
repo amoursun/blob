@@ -61,13 +61,13 @@ module.exports = {
     // theme: '@vuepress/blog',
     themeConfig: {
         // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
-        repo: 'https://github.com/Mulander-J/wiki1001.git',
+        repo: 'https://github.com/amoursun/blob.git',
         // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
         // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
         repoLabel: 'GitHub',
         // 以下为可选的编辑链接选项
         // 假如你的文档仓库和项目本身不在一个仓库：
-        docsRepo: 'https://github.com/Mulander-J/wiki1001',
+        docsRepo: 'https://github.com/amoursun/blob',
         // 假如文档不是放在仓库的根目录下：
         docsDir: 'docs',
         // 假如文档放在一个特定的分支下：
