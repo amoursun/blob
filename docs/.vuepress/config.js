@@ -1,4 +1,5 @@
 const path = require('path');
+const utils = require('./utils');
 
 module.exports = {
     title: "Amoursun's Blog",
@@ -35,6 +36,13 @@ module.exports = {
     //         }
     //     }
     // },
+    configureWebpack: {
+        resolve: {
+            alias: {
+                '@public': './public'
+            }
+        }
+    },
     chainWebpack: config => {
         config.resolve.alias.set('@theme', path.resolve(__dirname, './theme'))
     },
@@ -48,7 +56,7 @@ module.exports = {
         // 假如你的文档仓库和项目本身不在一个仓库：
         docsRepo: 'https://github.com/amoursun/blob',
         // 假如文档不是放在仓库的根目录下：
-        // docsDir: 'docs',
+        docsDir: 'docs',
         // 假如文档放在一个特定的分支下：
         // docsBranch: 'master',
         // 默认是 false, 设置为 true 来启用
@@ -78,6 +86,18 @@ module.exports = {
             {
                 text: '掘金',
                 link: 'https://juejin.cn/'
+            },
+            {
+                text: 'Blog',
+                link: '/blog/js'
+            },
+            {
+                text: '集合',
+                link: '/guide/video',
+            },
+            {
+                text: '面试',
+                link: '/interview/'
             },
             // 多项，下拉形式
             {
@@ -115,42 +135,16 @@ module.exports = {
                 ]
             },
         ],
-        hiddenPages: [
-            // '/',
-        ],
+        markdown: {
+            config: md => {
+                // use more markdown-it plugins!
+                md.use(require('markdown-it-include'))
+            }
+        },
+        hiddenPages: [],
         // sidebar: 'auto',
         // 侧边栏菜单( 一个模块对应一个菜单形式 )
-        sidebar: {
-            '/thought/': [
-                {
-                    title: 'JS',
-                },
-                {
-                    title: 'CSS',
-                },
-                {
-                    title: 'Node',
-                },
-                {
-                    title: 'ES6',
-                },
-                {
-                    title: 'Git',
-                },
-                {
-                    title: 'React & Mobx',
-                },
-                {
-                    title: '其他',
-                    children: [
-                        ['/thought/other/', '#other']
-                    ]
-                }
-            ],
-            '/another/': [
-                ['/another/aboutSelf', '#about_self'],
-            ]
-        },
+        sidebar: utils.inferSiderbars(),
         // locales: {
         //     '/': {
         //         selectText: 'Languages',
