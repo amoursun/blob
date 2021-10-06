@@ -100,27 +100,4 @@ skillList:
   color: pink  
   link: false 
  
-welfareList:
-- desc1: 2018.12.21
-  desc2: No.HSL18092026001
-  title2: 1m2土地[20年]
-  title1: 和顺县
-  picSrc: /img/Myself/antForest.png
-- desc1: 2019.01.18
-  desc2: No.HFA19227484201
-  title2: 梭梭树
-  title1: 武威地区
-  picSrc: /img/Myself/antForest.png
-- desc1: 2019.11.18
-  desc2: No.SJK20932703203
-  title2: 沙棘
-  title1: 通辽地区
-  picSrc: /img/Myself/antForest.png
-- desc1: 2019.11.20
-  desc2: No.DQK21001954075
-  title2: 1m2土地[10年]
-  title1: 德钦县
-  picSrc: /img/Myself/antForest.png    
----
-
 
